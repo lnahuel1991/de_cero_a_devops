@@ -10,4 +10,7 @@ jobs:  # Cada Job es una tarea distinta para agruparlo en un solo archivo o gith
     runs-on: ubuntu-latest #VM que pone a disposicion github ya preconfigurada con muchas de las herramientas mas comunes.
     steps: #Cada step va a correr en una sesion de terminal diferente dentro de la vm
       - uses: actions/checkout@v3 # Uses son acciones que github actions ya conoce,
-      - run: echo "hola crayola" # para ejecutar cualquier otra cosa que github no conozca.
+      - run: |
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # para ejecutar cualquier otra cosa que github no conozca.
+          brew install ruby brew-gem
+          brew gem install cfn-nag

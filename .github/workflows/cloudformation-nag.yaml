@@ -1,0 +1,13 @@
+name: Cloudformation nag
+on: [push]
+# on:
+#     pull_request_target:
+#       branches:
+#         - main
+
+jobs:  # Cada Job es una tarea distinta para agruparlo en un solo archivo o github action, para no tener varios por separado.
+  cloudformation-nag: #Nombre puesto al job.
+    runs-on: ubuntu-latest #VM que pone a disposicion github ya preconfigurada con muchas de las herramientas mas comunes.
+    steps: #Cada step va a correr en una sesion de terminal diferente dentro de la vm
+      - uses: actions/checkout@v3 # Uses son acciones que github actions ya conoce,
+      - run: echo "hola crayola" # para ejecutar cualquier otra cosa que github no conozca.

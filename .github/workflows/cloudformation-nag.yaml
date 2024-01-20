@@ -17,4 +17,4 @@ jobs:  # Cada Job es una tarea distinta para agruparlo en un solo archivo o gith
 
       - run: |
           eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-          cfn_nag_scan --input-path Tarea.yaml
+          cfn_nag_scan --input-path Tarea.yml
